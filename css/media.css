@@ -46,6 +46,21 @@
         font-size: 25px;
         margin-bottom: 30px;
     }
+    body .our_process .steps {
+        display: block;
+    }
+    body .our_process .steps h3 {
+        color: gray;
+        text-decoration: underline;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    body .our_process .steps h3 span {
+        color: #fc635e;
+    }
+    body .our_process .back_process {
+        display: none;
+    }
 } 
 @media screen and (max-width: 1260px) {
     section.recive {

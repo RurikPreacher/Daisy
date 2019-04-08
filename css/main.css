@@ -147,3 +147,33 @@ body .expand .mainText h2 {
   font-size: 55px;
   margin-bottom: 50px;
 }
+body .our_process {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+body .our_process .steps {
+  display: none;
+}
+body .our_process h2 {
+  color: gray;
+  text-decoration: underline;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+body .our_process h2 span {
+  color: #fc635e;
+}
+body .our_process p {
+  color: grey;
+  font-size: 18px;
+}
+body .our_process .back_process {
+  height: 500px;
+  width: auto;
+  background-image: url(../img/Our_process.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
