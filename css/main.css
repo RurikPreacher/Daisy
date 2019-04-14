@@ -216,3 +216,34 @@ body .wedo1 .left {
 body .wedo1 .right {
   max-width: 50%;
 }
+body .wedo2 {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .wedo2 .container {
+  display: flex;
+  justify-content: space-around;
+}
+body .wedo2 h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  border-right: 10px solid #fc635e;
+  padding-right: 5px;
+  color: gray;
+}
+body .wedo2 p {
+  padding-bottom: 15px;
+  color: gray;
+  font-size: 18px;
+}
+body .wedo2 .left {
+  text-align: right;
+  order: 2;
+  max-width: 50%;
+}
+body .wedo2 .right {
+  order: 1;
+  max-width: 50%;
+}
