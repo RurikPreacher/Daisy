@@ -1,6 +1,36 @@
+.h2 {
+  font-size: 50px;
+  color: #ffffff;
+}
+.h2:before {
+  content: "";
+  background: transparent;
+}
 body {
   margin: 0 auto;
   max-width: 1260px;
+}
+body h2 {
+  font-size: 35px;
+  margin: 20px 0px;
+  text-transform: uppercase;
+  color: #808080;
+  padding-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+body h2:before {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: #868686;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+body h2 span {
+  color: #fc635e;
 }
 body a.arrowDown {
   font-size: 30px;
@@ -16,7 +46,7 @@ body a.arrowDown {
 }
 body a.arrowDown:hover {
   background: #fc635e;
-  color: white;
+  color: #ffffff;
 }
 body a.btn {
   color: #fc635e;
@@ -28,32 +58,14 @@ body a.btn {
 }
 body a.btn:hover {
   background: #fc635e;
-  color: white;
+  color: #ffffff;
 }
 body .mainText {
   text-align: center;
 }
-body .mainText h1 {
-  text-transform: uppercase;
-  font-size: 50px;
-  color: white;
-}
-body .mainText h1 span {
-  color: #fc635e;
-}
 body .mainText p {
-  color: white;
+  color: #ffffff;
   font-size: 22px;
-}
-body .textH2 {
-  text-decoration: none;
-  margin: 0;
-  text-transform: uppercase;
-  color: white;
-  font-size: 40px;
-}
-body .textH2 span {
-  color: #fc635e;
 }
 body header {
   background: url('../img/background.png') no-repeat;
@@ -64,13 +76,21 @@ body header {
   max-width: 1260px;
   justify-content: space-around;
 }
+body header h2 {
+  font-size: 50px;
+  color: #ffffff;
+}
+body header h2:before {
+  content: "";
+  background: transparent;
+}
 body header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 body header nav > a {
-  color: white;
+  color: #ffffff;
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
@@ -83,19 +103,26 @@ body header nav .logo:hover img {
   opacity: 0.7;
 }
 body header nav menu {
+  padding: 0px;
   list-style: none;
   text-transform: uppercase;
   display: flex;
 }
-body header nav menu li {
-  padding-left: 15px;
+body header nav menu ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
 }
-body header nav menu li a {
-  color: white;
+body header nav menu ul li {
+  padding-left: 15px;
+  list-style-type: none;
+}
+body header nav menu ul li a {
+  color: #ffffff;
   font-size: 20px;
   text-decoration: none;
 }
-body header nav menu li a:hover {
+body header nav menu ul li a:hover {
   color: #fc635e;
   border-bottom: #fc635e solid 3px;
   padding-bottom: 5px;
@@ -103,22 +130,13 @@ body header nav menu li a:hover {
 body .recive {
   margin-top: 0;
   text-align: center;
-  background: white;
+  background: #ffffff;
   padding: 70px 50px 10px 50px;
   color: #868686;
 }
 body .recive p {
   font-size: 22px;
   margin-bottom: 50px;
-}
-body .recive h2 {
-  text-decoration: underline;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 28px;
-}
-body .recive h2 span {
-  color: #fc635e;
 }
 body .icons {
   display: flex;
@@ -138,14 +156,19 @@ body .expand {
   background: url(../img/expand.png) no-repeat;
   /*min-height: 450px;*/
 }
+body .expand h2 {
+  display: block;
+  font-size: 50px;
+  color: #ffffff;
+}
+body .expand h2:before {
+  content: "";
+  background: transparent;
+}
 body .expand .mainText {
   padding: 50px;
   margin-bottom: 80px;
   border: 15px solid rgba(0, 0, 0, 0.2);
-}
-body .expand .mainText h2 {
-  font-size: 55px;
-  margin-bottom: 50px;
 }
 body .our_process {
   text-align: center;
@@ -155,18 +178,8 @@ body .our_process {
 body .our_process .steps {
   display: none;
 }
-body .our_process h2 {
-  color: gray;
-  text-decoration: underline;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 28px;
-}
-body .our_process h2 span {
-  color: #fc635e;
-}
 body .our_process p {
-  color: grey;
+  color: #808080;
   font-size: 18px;
 }
 body .our_process .back_process {
@@ -188,26 +201,16 @@ body .wedo1 .container {
   display: flex;
   justify-content: space-around;
 }
-body .wedo1 h2 {
-  color: gray;
-  text-decoration: underline;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 28px;
-}
-body .wedo1 h2 span {
-  color: #fc635e;
-}
 body .wedo1 h3 {
   font-size: 24px;
   text-transform: uppercase;
   border-left: 10px solid #fc635e;
   padding-left: 5px;
-  color: gray;
+  color: #808080;
 }
 body .wedo1 p {
   padding-bottom: 15px;
-  color: gray;
+  color: #808080;
   font-size: 18px;
 }
 body .wedo1 .left {
@@ -231,11 +234,11 @@ body .wedo2 h3 {
   text-transform: uppercase;
   border-right: 10px solid #fc635e;
   padding-right: 5px;
-  color: gray;
+  color: #808080;
 }
 body .wedo2 p {
   padding-bottom: 15px;
-  color: gray;
+  color: #808080;
   font-size: 18px;
 }
 body .wedo2 .left {
@@ -256,20 +259,12 @@ body .portfolio {
 body .portfolio .btn {
   margin: 40px 0px;
 }
-body .portfolio h2 {
-  color: gray;
-  text-transform: uppercase;
-  font-size: 28px;
-  margin: 50px 0px;
-  padding-bottom: 5px;
-  border-bottom: 3px solid #b1b1b1;
-}
 body .portfolio .controls {
   text-align: center;
   letter-spacing: 2px;
   font-size: 25px;
-  border-top: 3px solid gray;
-  border-bottom: 3px solid gray;
+  border-top: 3px solid #808080;
+  border-bottom: 3px solid #808080;
   padding: 15px;
   margin-bottom: 30px;
 }
@@ -318,7 +313,7 @@ body .portfolio .container-filter div {
 body .portfolio .container-filter div .fil {
   font-size: 20px;
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   display: none;
   position: relative;
@@ -358,22 +353,17 @@ body .our_team .warp a {
 body .our_team .warp a:hover {
   color: #868686;
 }
+body .our_team .warp a ul {
+  margin: 0px;
+  padding: 0px;
+}
 body .our_team .warp p {
-  color: gray;
+  color: #808080;
 }
 body .our_team .warp h3 {
   color: #414141;
   padding-bottom: 5px;
 }
 body .our_team .warp h3 span {
-  color: #fc635e;
-}
-body .our_team h2 {
-  text-decoration: underline;
-  text-transform: uppercase;
-  color: gray;
-  padding-bottom: 5px;
-}
-body .our_team h2 span {
   color: #fc635e;
 }

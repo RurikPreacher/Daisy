@@ -1,11 +1,46 @@
+@primary-color: #fc635e;
+@gray-light: #868686;
+@gray-dark: #414141;
+@gray-text: gray;
+@white-text: white;
+.h2 {
+    font-size: 50px;
+    color: @white-text;
+    &:before {
+        content: "";
+        background: transparent;
+    }
+}
 body {
     margin: 0 auto;
     max-width: 1260px;
+    h2 {
+        font-size: 35px;
+        margin: 20px 0px;
+        text-transform: uppercase;
+        color: @gray-text;
+        padding-bottom: 5px;
+        display: inline-block;
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            height: 4px;
+            width: 100%;
+            background: @gray-light;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        span {
+            color: @primary-color;
+        }
+    }
     a.arrowDown {
         font-size: 30px;
         text-decoration: none;
-        color: #fc635e;
-        border: 1px solid #fc635e;
+        color: @primary-color;
+        border: 1px solid @primary-color;
         display: flex;
         justify-content: center;
         margin: 0 auto;
@@ -13,48 +48,33 @@ body {
         width: 45px;
         height: 45px;
         &:hover {
-            background: #fc635e;
-            color: white;
+            background: @primary-color;
+            color: @white-text;
         }
     }
     a.btn {
-        color: #fc635e;
+        color: @primary-color;
         text-decoration: none;
         font-size: 22px;
-        border: 2px solid #fc635e;
+        border: 2px solid @primary-color;
         padding: 12px 28px;
         border-radius: 8px;
         &:hover {
-            background: #fc635e;
-            color: white;
+            background: @primary-color;
+            color: @white-text;
         }
     }
     .mainText {
         text-align: center;
-        h1 {
-            text-transform: uppercase;
-            font-size: 50px;
-            color: white;
-            span {
-                color: #fc635e;
-            }
-        }
         p {
-            color: white;
+            color: @white-text;
             font-size: 22px;
         }
     }
-    .textH2 {
-        text-decoration: none;
-        margin: 0;
-        text-transform: uppercase;
-        color: white;
-        font-size: 40px;
-        span {
-            color: #fc635e;
-        }
-    }
     header {
+        h2 {
+            .h2;
+        }
         background: url('../img/background.png') no-repeat;
         display: flex;
         flex-direction: column;
@@ -67,7 +87,7 @@ body {
             justify-content: space-around;
             align-items: center;
             >a {
-                color: white;
+                color: @white-text;
                 font-size: 25px;
                 font-weight: bold;
                 text-decoration: none;
@@ -80,19 +100,26 @@ body {
                 opacity: 0.7;
             }
             menu {
+                padding: 0px;
                 list-style: none;
                 text-transform: uppercase;
                 display: flex;
-                li {
-                    padding-left: 15px;
-                    a {
-                        color:white;
-                        font-size: 20px;
-                        text-decoration: none;
-                        &:hover {
-                            color: #fc635e;
-                            border-bottom: #fc635e solid 3px;
-                            padding-bottom: 5px;
+                ul {
+                    display: flex;
+                    padding: 0px;
+                    margin: 0px;
+                    li {
+                        padding-left: 15px;
+                        list-style-type: none;
+                        a {
+                            color:@white-text;
+                            font-size: 20px;
+                            text-decoration: none;
+                            &:hover {
+                                color: @primary-color;
+                                border-bottom: @primary-color solid 3px;
+                                padding-bottom: 5px;
+                            }
                         }
                     }
                 }
@@ -102,21 +129,12 @@ body {
     .recive {
         margin-top: 0;
         text-align: center;
-        background: white;
+        background: @white-text;
         padding: 70px 50px 10px 50px;
-        color: #868686;
+        color:@gray-light;
         p {
             font-size: 22px;
             margin-bottom: 50px;
-        }
-        h2 {
-            text-decoration: underline;
-            margin: 0;
-            text-transform: uppercase;
-            font-size: 28px;
-            span {
-                color: #fc635e;
-            }
         }
     }
     .icons {
@@ -133,6 +151,10 @@ body {
         }
     }
     .expand {
+        h2 {
+            display: block;
+            .h2;
+        }
         padding: 100px 100px 15px 100px;
         background: url(../img/expand.png) no-repeat;
         /*min-height: 450px;*/
@@ -140,10 +162,6 @@ body {
             padding: 50px;
             margin-bottom: 80px;
             border: 15px solid rgba(0,0,0,0.2);
-            h2 {
-                font-size: 55px;
-                margin-bottom: 50px;
-            }
         }
     }
     .our_process {
@@ -153,18 +171,8 @@ body {
         text-align: center;
         padding-top: 30px;
         padding-bottom: 15px;
-        h2 {
-            color: gray;
-            text-decoration: underline;
-            margin: 0;
-            text-transform: uppercase;
-            font-size: 28px;
-            span {
-                color: #fc635e;
-            }
-        }
         p {
-            color: grey;
+            color: @gray-text;
             font-size: 18px;
         }
         .back_process {
@@ -186,26 +194,16 @@ body {
             display: flex;
             justify-content: space-around;
         }
-        h2 {
-            color: gray;
-            text-decoration: underline;
-            margin: 0;
-            text-transform: uppercase;
-            font-size: 28px;
-            span {
-                color: #fc635e;
-            }
-        }
         h3 {
             font-size: 24px;
             text-transform: uppercase;
-            border-left: 10px solid #fc635e;
+            border-left: 10px solid @primary-color;
             padding-left: 5px;
-            color: gray;
+            color: @gray-text;
         }
         p {
             padding-bottom: 15px;
-            color: gray;
+            color: @gray-text;
             font-size: 18px;
         }
         .left {
@@ -227,13 +225,13 @@ body {
         h3 {
             font-size: 24px;
             text-transform: uppercase;
-            border-right: 10px solid #fc635e;
+            border-right: 10px solid @primary-color;
             padding-right: 5px;
-            color: gray;
+            color: @gray-text;
         }
         p {
             padding-bottom: 15px;
-            color: gray;
+            color: @gray-text;
             font-size: 18px;
         }
         .left {
@@ -254,24 +252,16 @@ body {
         .btn {
             margin: 40px 0px;
         }
-        h2 {
-            color: gray;
-            text-transform: uppercase;
-            font-size: 28px;
-            margin: 50px 0px;
-            padding-bottom: 5px;
-            border-bottom: 3px solid #b1b1b1;
-        }
         .controls {
             text-align: center;
             letter-spacing: 2px;
             font-size: 25px;
-            border-top: 3px solid gray;
-            border-bottom: 3px solid gray;
+            border-top: 3px solid @gray-text;
+            border-bottom: 3px solid @gray-text;
             padding: 15px;
             margin-bottom: 30px;
             button {
-                color: #fc635e;
+                color: @primary-color;
                 background: transparent;
                 border: none;
                 text-transform: uppercase;
@@ -318,7 +308,7 @@ body {
                     }
                     font-size: 20px;
                     text-transform: uppercase;
-                    color: white;
+                    color: @white-text;
                     font-weight: bold;
                     display: none;
                     position: relative;
@@ -349,30 +339,25 @@ body {
                 margin-bottom: 15px;
             }
             a {
-                color: #414141;
+                color: @gray-dark;
                 font-size: 10px;
                 &:hover {
-                    color: #868686;
+                    color:@gray-light;
+                }
+                ul {
+                    margin: 0px;
+                    padding: 0px
                 }
             }
             p {
-                color: gray;
+                color: @gray-text;
             }
             h3 {
-                color: #414141;
+                color: @gray-dark;
                 padding-bottom: 5px;
                 span {
-                    color: #fc635e;
+                    color: @primary-color;
                 }
-            }
-        }
-        h2 {
-            text-decoration: underline;
-            text-transform: uppercase;
-            color: gray;
-            padding-bottom: 5px;
-            span {
-                color: #fc635e;
             }
         }
     }
