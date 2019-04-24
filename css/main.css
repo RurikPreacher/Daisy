@@ -48,6 +48,25 @@ body a.arrowDown:hover {
   background: #fc635e;
   color: #ffffff;
 }
+body .arrowUp {
+  color: #fc635e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-decoration: none;
+  border: 1px solid #fc635e;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  bottom: 21px;
+  right: 21px;
+  position: fixed;
+}
+body .arrowUp:hover {
+  background: #fc635e;
+  color: #ffffff;
+}
 body a.btn {
   color: #fc635e;
   text-decoration: none;
@@ -127,14 +146,14 @@ body header nav menu ul li a:hover {
   border-bottom: #fc635e solid 3px;
   padding-bottom: 5px;
 }
-body .recive {
+body .receive {
   margin-top: 0;
   text-align: center;
   background: #ffffff;
   padding: 70px 50px 10px 50px;
   color: #868686;
 }
-body .recive p {
+body .receive p {
   font-size: 22px;
   margin-bottom: 50px;
 }

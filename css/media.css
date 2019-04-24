@@ -70,13 +70,13 @@
     }
 } 
 @media screen and (max-width: 1260px) {
-    section.recive {
+    section.receive {
         padding: 30px 20px
     }
-    section.recive h2 {
+    section.receive h2 {
         font-size: 26px;
     }
-    section.recive p {
+    section.receive p {
         font-size: 18px;
         margin-bottom: 20px;
     }
@@ -141,5 +141,10 @@
     }
     .wedo2 .container .btn {
         margin-bottom: 20px;
+    }
+    body .arrowUp {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
     }
 }
